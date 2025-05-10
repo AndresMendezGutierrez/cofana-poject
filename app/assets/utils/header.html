@@ -8,7 +8,13 @@
         <figure class="size-12 lg:size-16">
             <img src="./assets/images/logoapp.png" alt="Logo">
         </figure>
-        <nav">
+        <nav class="flex gap-4 md:gap-8">
+            <select class="text-sm md:text-xs p-1.5 border rounded-md" id="theme-select" onchange="changeTheme(event)">
+                <option value="system">OS Theme</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+
             <ul class="flex gap-4 md:gap-8 lg:gap-12">
                 <li><a class="border-[#6937F5] hover:border-b-2 hover:text-[#6937F5]" href="index.html">Home</a></li>
                 <li><a class="border-[#6937F5] hover:border-b-2 hover:text-[#6937F5] text-[#6937F5]"
