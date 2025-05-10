@@ -9,46 +9,48 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body>
-    <header id="header"></header>
+<body class="grid place-content-center gap-2 dark:bg-gray-800 dark:text-white transition-all">
+    <header id="header" class="w-screen xl:max-w-[1512px]"></header>
 
-    <main class="grid gap-4">
+    <main class="w-screen xl:max-w-[1512px] m-auto grid gap-4 sm:gap-6 md:gap-10 lg:gap-16 xl:gap-23">
 
-        <header class="bg-[url('assets/images/newslayout.png')] bg-no-repeat h-60">
-            <aside class="flex">
-                <h1>WeatherTrip.<span>news</span></h1>
-                <p>Your guide to weather: Accurate forecasts, storm warnings, tips for preparing and more.</p>
+        <header class="bg-[url('assets/images/newslayout.png')] bg-no-repeat h-64 sm:h-80 lg:h-[448px] grid justify-center content-center sm:justify-end sm:pr-12 md:pr-16">
+            <aside class="text-white max-w-[497px] text-center sm:text-right">
+                <h1 class="font-times text-4xl sm:text-5xl lg:text-6xl">WeatherTrip.<span class="text-xl sm:text-2xl lg:text-4xl">news</span></h1>
+                <p class="text-balance sm:mt-6 md:mt-8 lg:mt-15">Your guide to weather: Accurate forecasts, storm warnings, tips for preparing and more.</p>
             </aside>
         </header>
     
-        <article>
+        <article class="grid gap-8 mx-auto max-w-[1129px] px-4">
     
-            <section class="flex flex-col md:flex-row gap-4 md:gap-16">
+            <section class="flex flex-col md:flex-row gap-6 md:justify-between">
     
-                <article>
+                <article class="md:basis-2/3">
     
                     <figure>
-                        <figcaption>Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat
+                        <figcaption class="text-pretty font-times text-xl sm:text-2xl lg:text-4xl mb-4">
+                            Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat
                             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae massa
-                            et lectus dolor in.</figcaption>
+                            et lectus dolor in.
+                        </figcaption>
                         <img src="assets/images/img1.png" alt="umbrella">
                     </figure>
     
-                    <section>
+                    <section class="grid grid-cols-1 grid-rows-3 sm:grid-cols-4 sm:grid-rows-1 justify-items-center sm:justify-items-stretch gap-4 mt-4">
     
-                        <aside>
+                        <aside class="flex gap-2 align-middle">
                             <figure>
                                 <img src="assets/images/becky.png" alt="Author">
                             </figure>
                             <div>
-                                <p>Becky Ferreira</p>
-                                <p>Author</p>
+                                <p class="font-bold">Becky Ferreira</p>
+                                <p class="text-xs">Author</p>
                             </div>
                         </aside>
     
                         <aside>
-                            <p>BBC News</p>
-                            <p>26/06/2024</p>
+                            <p class="font-bold">BBC News</p>
+                            <p class="text-xs">26/06/2024</p>
                         </aside>
     
                         <aside>
@@ -59,7 +61,7 @@
     
                 </article>
     
-                <aside class="sm:flex md:flex-col gap-5 md:gap-4">
+                <aside class="sm:flex md:flex-col gap-5 md:gap-4 md:basis-1/3 lg:basis-1/4">
                     <article>
                         <h4>BBC News</h4>
                         <p>Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
@@ -197,21 +199,9 @@
     
     </main>
     
-    <footer id="footer"></footer>
+    <footer class="bg-[#E7E4E3] dark:bg-[#B5B5B5] flex flex-col items-center gap-4 py-8 lg:py-16" id="footer"></footer>
 
-    <script>
-        fetch('./header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('header').innerHTML = data;
-          })
-          .catch(error => console.error('Error al cargar el archivo HTML:', error));
-        fetch('./footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer').innerHTML = data;
-          })
-          .catch(error => console.error('Error al cargar el archivo HTML:', error));
-      </script>
+    <script src="./js/index.js"></script>
+
 </body>
 </html>

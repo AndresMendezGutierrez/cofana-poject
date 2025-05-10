@@ -1,3 +1,17 @@
+/* fetch header & footer */
+fetch('./assets/utils/header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+  })
+  .catch(error => console.error('Error al cargar el archivo HTML:', error));
+fetch('./assets/utils/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  })
+  .catch(error => console.error('Error al cargar el archivo HTML:', error));
+
 /* Theme mode */
 function changeTheme(event) {
   const theme = event.target.value;
