@@ -1,11 +1,11 @@
 /* fetch header & footer */
-fetch('./assets/utils/header.html')
+fetch('./app/assets/utils/header.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('header').innerHTML = data;
   })
   .catch(error => console.error('Error al cargar el archivo HTML:', error));
-fetch('./assets/utils/footer.html')
+fetch('./app/assets/utils/footer.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('footer').innerHTML = data;
