@@ -36,16 +36,16 @@
                         <img src="assets/images/img1.png" alt="umbrella">
                     </figure>
     
-                    <section class="grid grid-cols-1 grid-rows-3 sm:grid-cols-4 sm:grid-rows-1 justify-items-center sm:justify-items-stretch gap-4 mt-4">
+                    <section class="grid gap-4 mt-4 grid-cols-1 grid-rows-3 sm:gap-0 sm:grid-cols-5 sm:grid-rows-1 justify-items-center sm:justify-items-stretch">
     
-                        <aside class="flex gap-2 align-middle">
+                        <aside class="flex gap-2 align-middle sm:col-span-2">
                             <figure>
                                 <img src="assets/images/becky.png" alt="Author">
                             </figure>
-                            <div>
-                                <p class="font-bold">Becky Ferreira</p>
-                                <p class="text-xs">Author</p>
-                            </div>
+                            <ol>
+                                <li class="font-bold">Becky Ferreira</li>
+                                <li class="text-xs">Author</li>
+                            </ol>
                         </aside>
     
                         <aside>
@@ -53,8 +53,8 @@
                             <p class="text-xs">26/06/2024</p>
                         </aside>
     
-                        <aside>
-                            <button>Access article</button>
+                        <aside class="flex items-center sm:col-span-2">
+                            <button class="bg-primary py-2 px-4 rounded-4xl text-white hover:bg-primary-light cursor-pointer">Access article</button>
                         </aside>
     
                     </section>
